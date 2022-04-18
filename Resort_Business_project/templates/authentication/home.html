@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mine/css/style.css' %}">
+    <link rel="shortcut icon" href="/static/assets/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="/static/assets/images/logo.png" type="image/x-icon">
+</head>
+<body class="home">
+
+    <div class="container home-page">
+
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+
+            <a class="navbar-brand" href="{% url 'Authentication:index' %}"><img class="rounded-circle ms-3" src="/static/assets/images/th-logo.png" alt="" style="width: 50px;height: 50px;"></a>
+                <ul class="nav-bar nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Authentication:index' %}">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'service:services' %}">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'service:lists' %}">Services</a>
+                    </li>
+
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link disabled" style="margin-left:550px;">Hi, {{ user.username | capfirst}}!</a>
+                        </li>
+
+                        <li class="nav-item" >
+                            <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                        </li>
+
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link disabled" style="margin-left:600px;">You're not Log In</a>
+                        </li>
+
+                        <li class="nav-item" >
+                            <a class="nav-link" href="{% url 'login' %}">Log in</a>
+                        </li>
+
+                    {% endif %}
+                 </ul>
+
+            </nav>
+
+
+        <div class="part">
+
+             <div class="recents">
+                <h2>Recent Services</h2>
+             </div>
+                <div class="contents">
+                    {% if sevices_list %}
+                <ul>
+                {% for service in sevices_list %}
+                    <li> <a class="abc" href="{% url 'service:data' service.id %}">{{service.name}}</a> </li>
+                {% endfor %}
+                </ul>
+                {% else %}
+                <ul>
+                    <li>No Recent Services Available!!</li>
+                </ul>
+                {% endif %}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

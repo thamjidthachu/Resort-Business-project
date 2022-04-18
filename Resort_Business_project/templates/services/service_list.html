@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>list</title>
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mine/css/style.css' %}">
+    <link rel="shortcut icon" href="/static/assets/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="/static/assets/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="{% url 'Authentication:index' %}"><img class="rounded-circle ms-3" src="/static/assets/images/th-logo.png" alt="" style="width: 50px;height: 50px;"></a>
+            <ul class="nav-bar nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Authentication:index' %}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Contact Us</a>
+                </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'service:services' %}">Gallery</a>
+                    </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'service:lists' %}">Services</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item" style="margin-left:550px;">
+                        <a class="nav-link disabled" href="#">Hi {{ user.username | capfirst}}!</a>
+                    </li>
+
+                <li class="nav-item" >
+                        <a class="nav-link" href="{% url 'logout' %}?next={{ request.get_full_path }}">Log Out</a>
+                </li>
+                {% else %}
+                    <li class="nav-item" style="margin-left:550px;">
+                        <a class="nav-link disabled" href="#">You're not Log In!</a>
+                    </li>
+
+                    <li class="nav-item" >
+                        <a class="nav-link" href="{% url 'login' %}?next={{ request.get_full_path }}">Log in</a>
+                    </li>
+                {% endif %}
+             </ul>
+        </nav>
+
+        <br>
+        <h2><u>Services</u></h2> <br> <br>
+        <table class="table">
+            {% if resort_services %}
+            {% for list in resort_services %}
+            <tr>
+                <td>
+                    {% if list.images_set.all %}
+                        <img src="{{ list.images_set.first.images.url }}" alt="img" class="list-img">
+                    {% else %}
+                        <p>No Images available</p>
+                    {% endif %}
+                </td>
+                <td class=" align-middle"><a class="elements" href="{% url 'service:data' list.id %}">{{ list.name }}</a></td>
+
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <th> <strong>No Data Available!</strong></th>
+            </tr>
+            {% endif %}
+        </table>
+
+
+
+        <!--For Pagination-->
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+
+
+
+
+    </div>
+
+</body>
+</html>

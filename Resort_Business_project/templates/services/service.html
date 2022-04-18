@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Detail View</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mine/css/style.css' %}">
+    <link rel="shortcut icon" href="/static/assets/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="/static/assets/images/logo.png" type="image/x-icon">
+</head>
+    <body class="data">
+        <div class="container">
+
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'service:lists' %}"> &laquo; Return to Services.</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'service:services' %}"> &laquo; Return to Gallery.</a>
+                        </li>
+                    {% if user.is_authenticated %}
+
+                        <li class="nav-item">
+                            <a class="nav-link" style="margin-left:650px;">Hi {{ user.username | capfirst}}!</a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}?next={{ request.path }}">Log Out</a>
+                        </li>
+                </ul>
+                    {% else %}
+
+                    <li class="nav-item" style="margin-left:630px;">
+                            <p class="nav-link">You're not Logged In!</p>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}?next={{ request.path }}">Log in</a>
+                        </li>
+
+                    {% endif %}
+
+                </ul>
+
+              </div>
+
+            </nav>
+
+            <h1>{{ service_data.name }}</h1>
+    <div class="prt">
+            <div>
+            {% for img in service_data.images_set.all %}
+                <img src="{{ img.images.url}}" alt="no img" class="data-img">
+            {% endfor %}
+            </div>
+
+        <h4 class="date">{{ service_data.create_time }}</h4>
+            <div class="black">
+                <h2>Description</h2>
+                {{ service_data.discription | safe }} <br>
+            </div>
+    </div>
+
+<div class="comment-section">
+<h3>Comments:</h3> <br><br>
+    {% if service_data.comments_set.all %}
+    <table class="table">
+        {% for choice in service_data.comments_set.all %}
+        <tr>
+            <td>
+                <h6 class="author">{{ choice.author }} says :</h6>
+                <p class="comment-text">{{ choice.message }}</p>
+            </td>
+
+            <td>
+                <p class="comment-time align-bottom">{{ choice.comment_time |date:"P l, d F y" }} </p>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+    <h6>No Comments yet!! Be the First.</h6>
+    {% endif %}
+        {% if user.is_authenticated %}
+        Comment as {{ user.username }}: <br>
+        <form method="post" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Post" class=" btn btn-primary">
+        </form>
+        {% else %}
+            <p>Please Log in to Comment.....</p>
+    {% endif %}
+    </div>
+
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'mine/css/style.css' %}">
+        <link rel="shortcut icon" href="/static/assets/images/logo.png" type="image/x-icon">
+        <link rel="icon" href="/static/assets/images/logo.png" type="image/x-icon">
+    </head>
+    <body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="{% url 'Authentication:index' %}"><img class="rounded-circle ms-3" src="data:image/png;base64,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" alt="" style="width: 50px;height: 50px;"></a>
+            <ul class="nav-bar nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Authentication:index' %}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Contact Us</a>
+                </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'service:services' %}">Gallery</a>
+                    </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'service:lists' %}">Services</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item" style="margin-left:550px;">
+                        <a class="nav-link disabled" href="#">Hi {{ user.username | capfirst}}!</a>
+                    </li>
+
+                <li class="nav-item" >
+                        <a class="nav-link" href="{% url 'logout' %}?next={{ request.get_full_path }}">Log Out</a>
+                </li>
+                {% else %}
+                    <li class="nav-item" style="margin-left:550px;">
+                        <a class="nav-link disabled" href="#">You're not Log In!</a>
+                    </li>
+
+                    <li class="nav-item" >
+                        <a class="nav-link" href="{% url 'login' %}?next={{ request.get_full_path }}">Log in</a>
+                    </li>
+                {% endif %}
+             </ul>
+        </nav>
+    </div>
+
+        <div class="album py-5">
+            <div class="container">
+                <div class="infinite-container">
+                     <h2>Services</h2> <br> <br>
+
+        <table class="table">
+            {% if resort_services %}
+            {% for list in resort_services %}
+            <tr>
+                <td>
+                    {% if list.images_set.all %}
+                        <img src="{{ list.images_set.first.images.url }}" alt="img" class="list-img">
+                    {% else %}
+                        <p>No Images available!!</p>
+                    {% endif %}
+                </td>
+                <td class=" align-middle"><a class="elements" href="{% url 'service:data' list.id %}">{{ list.name }}</a></td>
+
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <th> <strong>No Data Available!</strong></th>
+            </tr>
+            {% endif %}
+        </table>
+                </div>
+                {% if page_obj.has_next %}
+                <a class="infinite-more-link" href="?page={{ page_obj.next_page_number }}"></a>
+                {% endif %}
+                <div class="d-flex justify-content-center" style="display:none;">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% load static %}
+    <script src="static/assets/js/jquery-2.2.4.min.js"></script>
+    <script src="static/assets/js/jquery.waypoints.min.js"></script>
+    <script src="static/assets/js/infinite.min.js"></script>
+    
+    <script>
+        var infinite = new Waypoint.Infinite({
+            element: $('.infinite-container')[0],
+            handler: function(direction) {},
+            offset: 'bottom-in-view',
+            onBeforePageLoad: function () {
+                $('.spinner-border').show();
+            },
+            onAfterPageLoad: function () {
+                $('.spinner-border').hide();
+            }
+
+        });
+
+    </script>
+
+    </body>
+</html>

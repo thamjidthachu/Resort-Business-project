@@ -1,0 +1,91 @@
+# Create your views here.
+
+from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.urls import reverse
+from django.views.generic import DetailView, ListView
+from django.core.paginator import Paginator
+from django.views.generic.edit import FormMixin
+from .models import Services, Images, Comments
+from ..Authentication.models import Costumer, User
+from .forms import CommentsForm
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
+
+# def home(request):
+#     numbers_list = range(1, 1000)
+#     page = request.GET.get('page', 1)
+#     paginator = Paginator(numbers_list, 20)
+#     try:
+#         numbers = paginator.page(page)
+#     except PageNotAnInteger:
+#         numbers = paginator.page(1)
+#     except EmptyPage:
+#         numbers = paginator.page(paginator.num_pages)
+#     return render(request, 'services/pagination.html', {'numbers': numbers})
+
+class EndlessView(ListView):
+    model = Services
+    template_name = 'services/index.html'
+    context_object_name = 'resort_services'
+    # paginate_by = 5
+    ordering = ['-create_time']
+
+
+class EndlessScrollView(ListView):
+    model = Services
+    template_name = 'services/try.html'
+    context_object_name = 'posts'
+    paginate_by = 5
+    ordering = ['-create_time']
+
+
+class PageList(ListView):
+    template_name = 'services/service_list.html'
+    context_object_name = 'resort_services'
+    paginate_by = 5
+
+    def get_queryset(self):
+        return Services.objects.order_by('-create_time')
+
+    def listing(request):
+        name = Services.objects.all()
+        paginator = Paginator(name, 5)  # Show 5 contacts per page.
+
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        return render(request, 'list.html', {'page_obj': page_obj})
+
+
+class Details(FormMixin, DetailView):
+    template_name = 'services/service.html'
+    form_class = CommentsForm
+    model = Comments
+    context_object_name = 'service_data'
+
+    def get_queryset(self):
+        return Services.objects.all()
+
+    def get_success_url(self):
+        return reverse('service:data', kwargs={'pk': self.object.id})
+
+    def get_context_data(self, **kwargs):
+        context = super(Details, self).get_context_data(**kwargs)
+        context['form'] = CommentsForm(initial={'post': self.object})
+        return context
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        form = self.get_form()
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
+    def form_valid(self, form):
+        myform = form.save(commit=False)
+        myform.post = self.get_object()
+        myform.comments_count = get_object_or_404(Services, pk=self.kwargs['pk'])
+        myform.author = get_object_or_404(Costumer, user_id=self.request.user.id)
+        myform.save()
+        return super(Details, self).form_valid(form)
