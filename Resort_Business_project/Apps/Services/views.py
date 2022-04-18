@@ -12,30 +12,10 @@ from .forms import CommentsForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
-# def home(request):
-#     numbers_list = range(1, 1000)
-#     page = request.GET.get('page', 1)
-#     paginator = Paginator(numbers_list, 20)
-#     try:
-#         numbers = paginator.page(page)
-#     except PageNotAnInteger:
-#         numbers = paginator.page(1)
-#     except EmptyPage:
-#         numbers = paginator.page(paginator.num_pages)
-#     return render(request, 'services/pagination.html', {'numbers': numbers})
-
 class EndlessView(ListView):
     model = Services
     template_name = 'services/index.html'
     context_object_name = 'resort_services'
-    # paginate_by = 5
-    ordering = ['-create_time']
-
-
-class EndlessScrollView(ListView):
-    model = Services
-    template_name = 'services/try.html'
-    context_object_name = 'posts'
     paginate_by = 5
     ordering = ['-create_time']
 

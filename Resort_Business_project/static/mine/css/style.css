@@ -53,9 +53,9 @@ margin-left: 4%;
 
 
 .abc{
-    color: #2d2b82;
+    color: #305232;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
     font-size: large;
 }
 
@@ -77,6 +77,15 @@ margin-left: 4%;
 
 .data-img{
     width: 420px;
+    height: 290px;
+    max-width: 450px;
+    max-height: 300px;
+    padding: 10px;
+    object-fit: cover;
+    float: left;
+}
+.card-img{
+    width: 620px;
     height: 290px;
     max-width: 450px;
     max-height: 300px;

@@ -1,7 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         {% load static %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'mine/css/style.css' %}">
         <link rel="shortcut icon" href="/static/assets/images/logo.png" type="image/x-icon">
@@ -16,10 +16,6 @@
                     <a class="nav-link" href="{% url 'Authentication:index' %}">Home</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Contact Us</a>
-                </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'service:services' %}">Gallery</a>
                     </li>
@@ -27,6 +23,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'service:lists' %}">Services</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Contact Us</a>
+                </li>
+
                 {% if user.is_authenticated %}
                 <li class="nav-item" style="margin-left:550px;">
                         <a class="nav-link disabled" href="#">Hi {{ user.username | capfirst}}!</a>
@@ -48,15 +49,14 @@
         </nav>
     </div>
 
-        <div class="album py-5">
-            <div class="container">
-                <div class="infinite-container">
-                     <h2>Services</h2> <br> <br>
+    <div class="container">
 
-        <table class="table">
+    <br> <h2>Services</h2> <br>
+
+        <table class="table infinite-container">
             {% if resort_services %}
             {% for list in resort_services %}
-            <tr>
+            <tr class="infinite-item">
                 <td>
                     {% if list.images_set.all %}
                         <img src="{{ list.images_set.first.images.url }}" alt="img" class="list-img">
@@ -74,7 +74,9 @@
             </tr>
             {% endif %}
         </table>
-                </div>
+
+    </div>
+
                 {% if page_obj.has_next %}
                 <a class="infinite-more-link" href="?page={{ page_obj.next_page_number }}"></a>
                 {% endif %}
@@ -83,26 +85,25 @@
                         <span class="sr-only">Loading...</span>
                     </div>
                 </div>
-            </div>
-        </div>
-
-    {% load static %}
-    <script src="static/assets/js/jquery-2.2.4.min.js"></script>
-    <script src="static/assets/js/jquery.waypoints.min.js"></script>
-    <script src="static/assets/js/infinite.min.js"></script>
+    <script src="/static/assets/js/jquery-2.2.4.min.js"></script>
+    <script src="/static/assets/js/jquery.waypoints.min.js"></script>
+    <script src="/static/assets/js/infinite.min.js"></script>
     
     <script>
+
         var infinite = new Waypoint.Infinite({
             element: $('.infinite-container')[0],
-            handler: function(direction) {},
-            offset: 'bottom-in-view',
-            onBeforePageLoad: function () {
-                $('.spinner-border').show();
-            },
-            onAfterPageLoad: function () {
-                $('.spinner-border').hide();
-            }
+            handler: function(direction) {
+        },
 
+        offset: 'bottom-in-view',
+        onBeforePageLoad: function () {
+            $('.spinner-border').show();
+        },
+
+        onAfterPageLoad: function () {
+        $('.spinner-border').hide();
+        }
         });
 
     </script>

@@ -16,9 +16,8 @@ class ImagesInline(admin.StackedInline):
 class CommentsInline(admin.TabularInline):
     model = Comments
     can_delete = False
-    readonly_fields = ('message', 'author', 'comment_time')
+    readonly_fields = ('author', 'message', 'comment_time')
     verbose_name_plural = 'Comments'
-    extra = 0
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -29,7 +28,7 @@ class CommentsInline(admin.TabularInline):
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('author', 'message', 'service_name')
-    list_filter = ['comments_count']
+    list_filter = ['comments_count', 'author']
 
     @admin.display()
     def service_name(self, obj):

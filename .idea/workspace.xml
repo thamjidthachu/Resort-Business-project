@@ -2,114 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0391aed1-7950-4272-b1f0-24e5718e4cec" name="Changes" comment="Push to repository">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/migrations/0002_delete_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/migrations/0003_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/migrations/0004_costumer_delete_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/migrations/0005_rename_department_costumer_citizen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/migrations/0006_costumer_address_costumer_age_costumer_contacts_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/migrations/0007_remove_costumer_password_remove_costumer_username_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Resort_Business_project/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Resort_Business_project/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Resort_Business_project/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Resort_Business_project/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/Resort_Business_project/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/1600484146179_603912588_edited.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/2bedroom-tiny-1024x684.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Bar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Bar2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Business-Centre.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Business-Centre_hote.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Family_space.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/GettyImages-639328408.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Heritage_Villa3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Porto-Montenegro-Yacht-Club-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Porto-Montenegro-Yacht-Club-5_gIiML9V.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Porto-Montenegro-Yacht-Club-5_noYYkmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/The_Grill_1_auxOpLv.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Yacht_Club_Marina.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Yacht_Club_Marina_1boO2gv.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Zen_Resturent.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/become_a_housekeeper.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/business-center-roseate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/da_ustpi6C.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/daining_A2oVuNS.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/f8mvpqaedp5azunmrtlw.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/familiyvaca3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/home-bar-ideas-laurenliess-lo-hbx080121inspoindex-016-1640206482.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/houseboat-Spree-River-Germany.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/kerala-luxury-houseboat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/pool_facility.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/pool_facility_QzSVI27.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/resturent.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sight_Seeing.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sight_Seeing_Ompuptd.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sight_Seeing_quxcgFL.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/site_seeing_ZmERdj9.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sketch1568696234702.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/swimming_pool_area_kkLRb7S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/waterpark2_TLfesJr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/waterpark3_rZxxS9R.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/wedding_pool.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/yatch_facility.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/media/service_images/yatch_facility_vRorssk.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/1639134468094.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/Live with less_ #less #minimal #minimalist #minimalism #simple #simplicity #basic #quote #lifestyle.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/nwdn_file_temp_1609647055930.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/unexpected space saving spots_ - sfgirlbybay.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/wp2936933-coding-minimalist-wallpapers.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/wp4932288-coding-minimalist-wallpapers.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/wp4932289-coding-minimalist-wallpapers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/wp4932312-coding-minimalist-wallpapers.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/infinite.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery-2.2.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery.waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/service.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/service_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/try.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/th-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/infinite.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/infinite.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery-2.2.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery-2.2.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery.waypoints.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery.waypoints.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/services/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/services/service_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/service_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/services/try.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
