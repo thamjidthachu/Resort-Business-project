@@ -6,6 +6,6 @@ from django.conf.urls.static import static
 app_name = 'service'
 urlpatterns = [
     path('', views.PageList.as_view(), name='lists'),
-    path('<int:pk>', views.Details.as_view(), name='data'),
-    path('endless-scroll', views.EndlessView.as_view(), name='services'),
+    path('endless', views.EndlessScroll.as_view(), name='infinity'),
+    path('<slug:slug>', views.Details.as_view(), name='data'),
 ]

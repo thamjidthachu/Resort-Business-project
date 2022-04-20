@@ -22,7 +22,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'service:services' %}">Gallery</a>
+                        <a class="nav-link" href="{% url 'service:infinity' %}">Gallery</a>
                     </li>
 
                     <li class="nav-item">
@@ -66,7 +66,7 @@
                     {% if sevices_list %}
                 <ul>
                 {% for service in sevices_list %}
-                    <li> <a class="abc" href="{% url 'service:data' service.id %}">{{service.name}}</a> </li>
+                    <li> <a class="abc" href="{% url 'service:data' service.slug %}">{{service.name}}</a> </li>
                 {% endfor %}
                 </ul>
                 {% else %}

@@ -17,7 +17,7 @@
                 </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'service:services' %}">Gallery</a>
+                        <a class="nav-link" href="{% url 'service:infinity' %}">Gallery</a>
                     </li>
 
                 <li class="nav-item">
@@ -64,7 +64,7 @@
                         <p>No Images available!!</p>
                     {% endif %}
                 </td>
-                <td class=" align-middle"><a class="elements" href="{% url 'service:data' list.id %}">{{ list.name }}</a></td>
+                <td class=" align-middle"><a class="elements" href="{% url 'service:data' list.slug %}">{{ list.name }}</a></td>
 
             </tr>
             {% endfor %}

@@ -4,11 +4,13 @@ from django.contrib import admin
 from ckeditor.fields import RichTextField
 from ..Authentication.models import Costumer
 from django.db.models.fields import DateTimeField
+from django.utils.text import slugify
 from datetime import datetime
 
 
 class Services(models.Model):
     name = models.CharField(max_length=40)
+    slug = models.SlugField(unique=True, default=name)
     discription = RichTextField(null=True)
     create_time = DateTimeField(blank=True, auto_now_add=True)
     last_used_time = DateTimeField(null=True, blank=True)
@@ -18,6 +20,10 @@ class Services(models.Model):
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Services, self).save(*args, **kwargs)
 
 
 class Images(models.Model):
@@ -41,3 +47,4 @@ class Comments(models.Model):
     )
     def __str__(self):
         return self.message
+
