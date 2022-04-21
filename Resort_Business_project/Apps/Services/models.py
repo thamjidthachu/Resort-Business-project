@@ -30,8 +30,8 @@ class Images(models.Model):
     number = models.ForeignKey(Services, on_delete=models.CASCADE)
     images = models.ImageField(upload_to="service_images", max_length=256)
 
-    def __unicode__(self):
-        return self.images
+    def __str__(self):
+        return '%s - %s' % (str(self.number), str(self.images))
 
 
 class Comments(models.Model):
@@ -48,3 +48,5 @@ class Comments(models.Model):
     def __str__(self):
         return self.message
 
+    def total_comments(self):
+        return self.comments_count.count()

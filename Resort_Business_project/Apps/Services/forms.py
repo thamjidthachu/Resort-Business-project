@@ -9,11 +9,14 @@ class CommentsForm(forms.ModelForm):
         fields = ('message',)
         error_messages = {
             'message': {
-                'required': "Please Enter your Comment.",
+                'required': "Please Enter your Comment before you post.",
+                'minlength': "Type something more."
             },
         }
         widgets = {
             'message': forms.TextInput(
-                attrs={'class': 'form-control', 'placeholder': 'Comment Your Review', 'required': True},)
+                attrs={'class': 'form', 'placeholder': 'Comment Your Review', 'required': True, 'minlength': 5})
         }
-
+        labels = {
+            'message': '',
+        }

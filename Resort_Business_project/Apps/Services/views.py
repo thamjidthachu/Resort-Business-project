@@ -1,6 +1,6 @@
 # Create your views here.
 
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views.generic import DetailView, ListView
@@ -49,10 +49,10 @@ class Details(FormMixin, DetailView):
     def get_success_url(self):
         return reverse('service:data', kwargs={'slug': self.kwargs['slug']})
 
-    # def get_context_data(self, **kwargs):
-    #     context = super(Details, self).get_context_data(**kwargs)
-    #     context['form'] = CommentsForm(initial={'post': self.object})
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super(Details, self).get_context_data(**kwargs)
+        # context['form'] = CommentsForm(initial={'post': self.object})
+        return context
 
     def post(self, request, *args, **kwargs):
         self.object = self.get_object()
@@ -70,3 +70,7 @@ class Details(FormMixin, DetailView):
         myform.comments_count = get_object_or_404(Services, pk=self.object.id)
         myform.save()
         return super(Details, self).form_valid(form)
+
+    def form_invalid(self, form):
+        print('hiiiii')
+        return super(Details, self).form_invalid(form)

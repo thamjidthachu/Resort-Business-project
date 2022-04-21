@@ -76,27 +76,27 @@
                     <img class="rounded mx-auto d-block w-100 p-2 border border-dark" src="/static/assets/images/user.png" alt="user">
                 </div>
                 <div class="col-md-11">
-                    <b> {{comment.author}} </b> <span class="badge badge-secondary">{{comment.comment_time | date:"P"}}</span>
+                    <b> {{comment.author}} </b> <span class="badge bg-secondary">{{comment.comment_time}}</span>
                     <div> {{comment.message}}</div>
                     <div class="reply mx-0">
-                                <button class="btn btn-sm btn-primary" type="button" data-toggle="collapse" data-target="#replyBox{{comment.id}}" aria-expanded="false" aria-controls="replyBox {{comment.id}}">
-                                    Reply
-                                </button>
+                            <button class="btn btn-sm btn-primary" type="button" data-toggle="collapse" data-target="#replyBox{{comment.id}}" aria-expanded="false" aria-controls="replyBox {{comment.id}}">
+                                Reply
+                            </button>
 
-                                <div class="collapse" id="replyBox{{comment.id}}">
-                                    <div class="card card-body my-2">
-                                        {% if user.is_authenticated %}
-                                            Reply as {{ user.username }}: <br>
-                                            <form method="post" class="post-form" novalidate>
-                                                {% csrf_token %}
-                                                {{ form.as_p }}
-                                                <input type="submit" value="Post" class=" btn btn-primary">
-                                            </form>
-                                            {% else %}
-                                                <p>Please Log in to Reply.....</p>
-                                        {% endif %}
-                                    </div>
+                            <div class="collapse" id="replyBox{{comment.id}}">
+                                <div class="card card-body my-2">
+                                    {% if user.is_authenticated %}
+                                        Reply as {{ user.username }}: <br>
+                                        <form method="post" class="post-form" novalidate>
+                                            {% csrf_token %}
+                                            {{ form.as_p }}
+                                            <input type="submit" value="Post" class=" btn btn-primary">
+                                        </form>
+                                        {% else %}
+                                            <p>Please Log in to Reply.....</p>
+                                    {% endif %}
                                 </div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -110,7 +110,11 @@
         <form method="post" class="post-form" novalidate>
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Post" class=" btn btn-primary">
+            {% for error in form.error %}
+                {{ error}}
+            {% endfor %}
+
+            <input type="submit" value="Post" class=" btn btn-primary ms-2">
         </form>
         {% else %}
             <p>Please Log in to Comment.....</p>

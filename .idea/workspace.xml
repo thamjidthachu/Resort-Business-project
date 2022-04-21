@@ -2,22 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0391aed1-7950-4272-b1f0-24e5718e4cec" name="Changes" comment="Push to repository">
-      <change afterPath="$PROJECT_DIR$/.idea/Resort-Business.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/mine/js/script2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/spinner-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/rough.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/mine/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/mine/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/services/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/endless_service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/infinite.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/infinite.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery-2.2.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery-2.2.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery.waypoints.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery.waypoints.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/services/endless_service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/endless_service.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/services/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/services/service_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/service_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +103,21 @@
       <option name="presentableId" value="Default" />
       <updated>1649045455528</updated>
     </task>
+    <task id="LOCAL-00001" summary="Push to repository">
+      <created>1650443643003</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650443643003</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Push to repository">
+      <created>1650443662739</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650443662739</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,5 +130,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Push to repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push to repository" />
   </component>
 </project>

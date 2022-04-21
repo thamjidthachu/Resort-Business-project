@@ -18,4 +18,4 @@ class Costumer(models.Model):
     created_time = models.DateTimeField(blank=True, auto_now_add=True)
 
     def __str__(self):
-        return self.first_name + " " + self.last_name
+        return str(self.user) + " - " +self.first_name + " " +self.last_name
