@@ -27,12 +27,12 @@ class CommentsInline(admin.TabularInline):
 
 
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('author', 'message', 'service_name')
-    list_filter = ['comments_count', 'author']
+    list_display = ('message', 'author', 'object_id', 'service_name')
+    list_filter = ['service_id', 'author']
 
     @admin.display()
     def service_name(self, obj):
-        return obj.comments_count.name
+        return obj.service_id.name
 
 
 class ServiceAdmin(admin.ModelAdmin):

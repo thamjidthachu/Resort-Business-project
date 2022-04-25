@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Detail View</title>
     {% load static %}
@@ -79,43 +79,40 @@
                     <b> {{comment.author}} </b> <span class="badge bg-secondary">{{comment.comment_time}}</span>
                     <div> {{comment.message}}</div>
                     <div class="reply mx-0">
-                            <button class="btn btn-sm btn-primary" type="button" data-toggle="collapse" data-target="#replyBox{{comment.id}}" aria-expanded="false" aria-controls="replyBox {{comment.id}}">
-                                Reply
-                            </button>
+                        <p class="link" data-toggle="collapse" data-target="#replyBox{{comment.id}}" aria-expanded="false" aria-controls="replyBox {{comment.id}}">
+                            Reply
+                        </p>
 
-                            <div class="collapse" id="replyBox{{comment.id}}">
-                                <div class="card card-body my-2">
-                                    {% if user.is_authenticated %}
-                                        Reply as {{ user.username }}: <br>
-                                        <form method="post" class="post-form" novalidate>
-                                            {% csrf_token %}
-                                            {{ form.as_p }}
-                                            <input type="submit" value="Post" class=" btn btn-primary">
-                                        </form>
-                                        {% else %}
-                                            <p>Please Log in to Reply.....</p>
-                                    {% endif %}
-                                </div>
+                        <div class="collapse" id="replyBox{{comment.id}}">
+                            <div class="card card-body my-2">
+
+                                {% if user.is_authenticated %}
+                                    Reply as {{ user.username }}: <br>
+                                    <form action=/blog/postComment" method="post">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                        <input type="text" class=form-control" name="comment" placeholder="Enter comment here">
+                                        </div>
+                                        <input type="hidden" name="postSno" value="{{post.sno}}">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                    {% else %}
+                                    <p>Please Log in to Reply.....</p>
+                                {% endif %}
+
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
+                <hr>
         {% endfor %}
 
     {% else %}
     <h6>No Comments yet!! Be the First.</h6>
     {% endif %}
         {% if user.is_authenticated %}
-        Comment as {{ user.username }}: <br>
-        <form method="post" class="post-form" novalidate>
-            {% csrf_token %}
-            {{ form.as_p }}
-            {% for error in form.error %}
-                {{ error}}
-            {% endfor %}
-
-            <input type="submit" value="Post" class=" btn btn-primary ms-2">
-        </form>
+        Comment as {{ user.username }}:
         {% else %}
             <p>Please Log in to Comment.....</p>
     {% endif %}
@@ -126,6 +123,7 @@
     <script src="/static/assets/js/bootstrap.bundle.js"></script>
     <script src="/static/mine/js/script2.js"></script>
     <script src="/static/mine/js/script.js"></script>
+    <script> $('.link').css('cursor', 'pointer'); </script>
 
 
 

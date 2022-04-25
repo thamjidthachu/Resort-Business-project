@@ -1,11 +1,11 @@
 # Create your models here.
+from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelation
 from django.db import models
-from django.contrib import admin
 from ckeditor.fields import RichTextField
 from ..Authentication.models import Costumer
 from django.db.models.fields import DateTimeField
 from django.utils.text import slugify
-from datetime import datetime
+from django.contrib.contenttypes.models import ContentType
 
 
 class Services(models.Model):
@@ -14,6 +14,7 @@ class Services(models.Model):
     discription = RichTextField(null=True)
     create_time = DateTimeField(blank=True, auto_now_add=True)
     last_used_time = DateTimeField(null=True, blank=True)
+    comments = GenericRelation('Comments')
 
     def __unicode__(self):
         return self.name
@@ -35,18 +36,17 @@ class Images(models.Model):
 
 
 class Comments(models.Model):
-    comments_count = models.ForeignKey(Services, on_delete=models.CASCADE)
+    service_id = models.ForeignKey(Services, on_delete=models.CASCADE)
     author = models.ForeignKey(Costumer, on_delete=models.CASCADE)
     message = models.CharField(max_length=256)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField(null=True)
+    content_object = GenericForeignKey('content_type', 'object_id')
     comment_time = DateTimeField(auto_now_add=True, blank=True)
 
-    @admin.display(
-        boolean=True,
-        ordering='create_time',
-        description='Commented Person',
-    )
     def __str__(self):
         return self.message
 
     def total_comments(self):
-        return self.comments_count.count()
+        return self.service_id.count()
+

@@ -1,15 +1,14 @@
 # Create your views here.
 
-from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
+
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views.generic import DetailView, ListView
-from django.core.paginator import Paginator
 from django.views.generic.edit import FormMixin
-from .models import Services, Images, Comments
-from ..Authentication.models import Costumer, User
+from .models import Services, Comments
+from ..Authentication.models import Costumer
 from .forms import CommentsForm
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.paginator import Paginator
 
 
 class EndlessScroll(ListView):
@@ -67,10 +66,14 @@ class Details(FormMixin, DetailView):
         myform = form.save(commit=False)
         myform.post = self.get_object()
         myform.author = get_object_or_404(Costumer, user_id=self.request.user.id)
-        myform.comments_count = get_object_or_404(Services, pk=self.object.id)
+        myform.service_id = get_object_or_404(Services, pk=self.object.id)
         myform.save()
         return super(Details, self).form_valid(form)
 
     def form_invalid(self, form):
-        print('hiiiii')
         return super(Details, self).form_invalid(form)
+
+    # @register.filter
+    # def reply(self, aVal):
+    #     result = aVal.filter(is_known=False)
+    #     return result

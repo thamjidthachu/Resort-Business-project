@@ -173,3 +173,10 @@ ul.errorlist>li {
         border-radius: 0.25rem;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
+    .link{
+        color: rgb(89, 89, 226)
+    }
+    .link:hover
+    {
+        color: rgb(149, 60, 60)
+    }
