@@ -40,7 +40,7 @@ class Comments(models.Model):
     author = models.ForeignKey(Costumer, on_delete=models.CASCADE)
     message = models.CharField(max_length=256)
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
-    object_id = models.PositiveIntegerField(null=True)
+    object_id = models.PositiveIntegerField(blank=True)
     content_object = GenericForeignKey('content_type', 'object_id')
     comment_time = DateTimeField(auto_now_add=True, blank=True)
 

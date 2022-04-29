@@ -27,8 +27,8 @@ class CommentsInline(admin.TabularInline):
 
 
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('message', 'author', 'object_id', 'service_name')
-    list_filter = ['service_id', 'author']
+    list_display = ('message', 'author', 'object_id', 'service_name', 'content_type')
+    list_filter = ['content_type', 'author']
 
     @admin.display()
     def service_name(self, obj):

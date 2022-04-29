@@ -70,7 +70,9 @@
 <div class="comment-section">
 <h3>Comments:</h3>
     {% if service_data.comments_set.all %}
+
         {% for comment in service_data.comments_set.all %}
+            {% if comment.content_type_id == 7 %}
             <div class="row my-3">
                 <div class="col-md-1">
                     <img class="rounded mx-auto d-block w-100 p-2 border border-dark" src="/static/assets/images/user.png" alt="user">
@@ -82,21 +84,35 @@
                         <p class="link" data-toggle="collapse" data-target="#replyBox{{comment.id}}" aria-expanded="false" aria-controls="replyBox {{comment.id}}">
                             Reply
                         </p>
+            {% endif %}
+                        <div class="collapse card card-body" id="replyBox{{comment.id}}">
+                             {% if comment.content_type_id == 9 and comment.object_id == comment.id %}
+                                <div class="row my-3">
+                                    <div class="col-md-1">
+                                        <img class="rounded mx-auto d-block w-100 p-2 border border-dark" src="/static/assets/images/user.png" alt="user">
+                                    </div>
+                                    <div class="col-md-11">
+                                        <b> {{comment.author}} </b> <span class="badge badge-sm bg-secondary">{{comment.comment_time}}</span>
+                                        <div> {{comment.message}}</div>
+                                    </div>
+                                </div>
+                            {% endif %}
 
-                        <div class="collapse" id="replyBox{{comment.id}}">
-                            <div class="card card-body my-2">
-
+                            <div class="my-2">
                                 {% if user.is_authenticated %}
                                     Reply as {{ user.username }}: <br>
-                                    <form action=/blog/postComment" method="post">
-                                        {% csrf_token %}
-                                        <div class="form-group">
-                                        <input type="text" class=form-control" name="comment" placeholder="Enter comment here">
-                                        </div>
-                                        <input type="hidden" name="postSno" value="{{post.sno}}">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-                                    {% else %}
+                                <form action="{% url 'service:replies' %}" method="POST" novalidate>
+                                    {% csrf_token %}
+                                    {% if from.errors %}
+                                        {{ form.errors}}
+                                    {% endif %}
+                                    <input type="text" name="reply" class="form" placeholder="Reply to {{ comment.author }}">
+                                    <input type="hidden" name="reply_id" value="{{ comment.id }}">
+                                    <input type="hidden" name="service_id" value="{{ service_data.id }}">
+                                    <input type="hidden" name="authuser" value="{{ user.id}}">
+                                    <input class="btn btn-primary ms-2" type="submit" value="post">
+                                </form>
+                                {% else %}
                                     <p>Please Log in to Reply.....</p>
                                 {% endif %}
 
@@ -105,27 +121,35 @@
                     </div>
                 </div>
             </div>
-                <hr>
+
         {% endfor %}
 
     {% else %}
-    <h6>No Comments yet!! Be the First.</h6>
+            <h6>No Comments yet!! Be the First.</h6>
     {% endif %}
-        {% if user.is_authenticated %}
-        Comment as {{ user.username }}:
-        {% else %}
-            <p>Please Log in to Comment.....</p>
-    {% endif %}
-    </div>
 
-        </div>
+    {% if user.is_authenticated %}
+        Comment as {{ user.username }}:
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            {% if from.errors %}
+                {{ form.errors}}
+            {% endif %}
+            {{ form.as_p }}
+            <input class="btn btn-outline-primary ms-2" type="submit" value="post">
+        </form>
+    {% else %}
+        <p>Please Log in to Comment.....</p>
+    {% endif %}
+
+</div>
+
+    </div>
 
     <script src="/static/assets/js/bootstrap.bundle.js"></script>
     <script src="/static/mine/js/script2.js"></script>
     <script src="/static/mine/js/script.js"></script>
     <script> $('.link').css('cursor', 'pointer'); </script>
-
-
 
     </body>
 </html>

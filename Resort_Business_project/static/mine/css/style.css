@@ -76,7 +76,7 @@ margin-left: 4%;
 }
 
 .data-img{
-    width: 420px;
+    width: 432px;
     height: 290px;
     max-width: 450px;
     max-height: 300px;
@@ -133,11 +133,6 @@ li>h3{
     color: darkblue;
     margin-left: 600px;
 }
-
-/* p>label{
-    visibility: hidden;
-} */
-
 .form-class{
     margin-top: 225px;
 }

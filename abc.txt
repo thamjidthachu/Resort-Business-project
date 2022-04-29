@@ -1,0 +1,42 @@
+
+
+                                {% if service_data.replycomment_set.all %}
+                                    {% for reply in service_data.replycomment_set.filter(id=22) %}
+                                        <div class="row my-3">
+                                            <div class="col-md-1">
+                                                <img class="rounded mx-auto d-block w-100 p-2 border border-dark" src="/static/assets/images/user.png" alt="user">
+                                            </div>
+                                            <div class="col-md-11">
+                                                <b> {{reply.replier}} </b> <span class="badge bg-secondary">{{reply.reply_time}}</span>
+                                            <div> {{reply.reply}}</div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+
+
+
+<form action=/blog/postComment" method="post">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                        <input type="text" class=form-control" name="comment" placeholder="Enter comment here">
+                                        </div>
+                                        <input type="hidden" name="postSno" value="{{post.sno}}">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+
+
+
+# def replayPost(request):
+#     if request.method == 'POST':
+#         rply = request.POST['reply']
+#         print(request.POST['reply'])
+#     o_id = request.POST['reply_id']
+#     auth = Services.objects.
+#    s_id = get_object_or_404(Services, pk=self.object.id)
+#
+#     post = Comments.objects.create(message=rply, object_id=o_id, author=auth, service=s_id )
+#     post.save()
+#     return render(request, 'services/service.html')
+# else:
+#     return render(request, 'services/service.html')
