@@ -118,6 +118,7 @@ button a{
     background-color: rgba(255, 255, 255, 0.486);
     padding: 10px;
     margin-top: 10px;
+    height: 100%;
 }
 .comment-time{
     font-size: smaller;
