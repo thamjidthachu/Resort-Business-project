@@ -70,12 +70,10 @@
         </div>
 
         <div class="comment-section container">
-            {{service.comments}}
         <h3>Comments:</h3>
-            {% if comments %}
-                {% for comment in comments %}
-                    {% if comment.content_type_id == 7 and comment.object_id == service_data.id %}
-
+            {% if service_data.service_comment.all %}
+                {% for comment in service_data.service_comment.all %}
+                    {% if comment.object_id == service_data.id %}
                     <div class="row my-3">
                         <div class="col-md-1">
                             <img class="rounded mx-auto d-block w-100 p-2 border border-dark" src="/static/assets/images/user.png" alt="user">

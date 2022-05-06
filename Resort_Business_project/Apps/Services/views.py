@@ -49,7 +49,9 @@ class Details(FormMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(Details, self).get_context_data(**kwargs)
-        context['comments'] = Comments.objects.all()
+        # print(self.object, 'hiiiiiiiiii')
+        # print(self.object.comments, 'helllllllllllloooooo')
+        # context['comments'] = Comments.objects.all()
         return context
 
     def get_success_url(self):
@@ -70,8 +72,6 @@ class Details(FormMixin, DetailView):
         print("Printing From - ", myform.post)
         myform.author = get_object_or_404(Costumer, user_id=self.request.user.id)
         print("Author is - ", myform.author)
-        myform.service_id = get_object_or_404(Services, pk=self.object.id)
-        print("Service ID is - ", myform.service_id)
         myform.content_type = ContentType.objects.get(app_label='Services', model='services')
         print("Content type is - ", myform.content_type)
         myform.content_object = get_object_or_404(Services, pk=self.object.id)

@@ -14,6 +14,7 @@ class Services(models.Model):
     discription = RichTextField(null=True)
     create_time = DateTimeField(blank=True, auto_now_add=True)
     last_used_time = DateTimeField(null=True, blank=True)
+    service_comment = GenericRelation('comments')
 
     def __str__(self):
         return self.name
