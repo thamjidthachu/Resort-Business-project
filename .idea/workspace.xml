@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0391aed1-7950-4272-b1f0-24e5718e4cec" name="Changes" comment="Push to repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/database.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/language.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/python.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/thachu-logo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/unexpected space saving spots_ - sfgirlbybay.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/user.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/services/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/service.html" afterDir="false" />
     </list>

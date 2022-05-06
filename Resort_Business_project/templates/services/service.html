@@ -70,50 +70,46 @@
         </div>
 
         <div class="comment-section container">
+            {{service.comments}}
         <h3>Comments:</h3>
-            {% if service_data.comments_set.all %}
-                {% for comment in service_data.comments_set.all %}
-                    {% if comment.content_type_id == 7 %}
+            {% if comments %}
+                {% for comment in comments %}
+                    {% if comment.content_type_id == 7 and comment.object_id == service_data.id %}
+
                     <div class="row my-3">
                         <div class="col-md-1">
                             <img class="rounded mx-auto d-block w-100 p-2 border border-dark" src="/static/assets/images/user.png" alt="user">
                         </div>
                         <div class="col-md-11">
-                            <b> {{comment.author}} </b> <span class="badge bg-secondary">{{comment.comment_time}}</span>
+                            <b> {{comment.author}} </b> <span class="badge bg-dark">{{comment.comment_time}}</span>
                             <div> {{comment.message}}</div>
+
                             <div class="reply mx-0">
                                 <p class="link" data-toggle="collapse" data-target="#replyBox{{comment.id}}" aria-expanded="false" aria-controls="replyBox {{comment.id}}">
                                     Reply
                                 </p>
-                    {% endif %}
-                                <div class="collapse" id="replyBox{{comment.id}}">
-                                <p>Replies here...............</p>
-                                {% for replycomment in service_data.comments_set.all %}
-                                    {% if replycomment.content_type_id == 9  and replycomment.object_id == comment.id%}
+                                <div class="collapse reply-sec" id="replyBox{{comment.id}}">
+                                    {% for reply in comment.comment.all %}
                                     <hr>
                                     <div class="row my-3">
                                         <div class="col-md-1">
-                                            <img class="rounded mx-auto d-block w-100 p-2 border border-dark" src="/static/assets/images/user.png" alt="user">
+                                            <img class="rounded mx-auto d-block w-100 p-2 border border-danger" src="/static/assets/images/user.png" alt="user">
                                         </div>
                                         <div class="col-md-11">
-                                            <b> {{replycomment.author}} </b> <span class="badge bg-secondary">{{replycomment.comment_time}}</span>
-                                            <div> {{replycomment.message}}</div>
+                                            <b> {{reply.author}} </b> <span class="badge bg-secondary">{{reply.comment_time}}</span>
+                                            <div> {{reply.message}}</div>
                                         </div>
                                     </div>
-                                    {% endif %}
-                                {% endfor %}
+                                    {% endfor %}
 
                                 <div class="my-2">
                                     {% if user.is_authenticated %}
                                         Reply as {{ user.username }}: <br>
                                     <form action="{% url 'service:replies' %}" method="POST" novalidate>
                                         {% csrf_token %}
-                                        {% if from.errors %}
-                                            {{ form.errors}}
-                                        {% endif %}
                                         <input type="text" name="reply" class="form" placeholder="Reply to {{ comment.author }}">
                                         <input type="hidden" name="reply_id" value="{{ comment.id }}">
-                                        <input type="hidden" name="service_id" value="{{ service_data.id }}">
+                                        <input type="hidden" name="service" value="{{ comment.object_id }}">
                                         <input type="hidden" name="authuser" value="{{ user.id}}">
                                         <input class="btn btn-primary ms-2" type="submit" value="post">
                                     </form>
@@ -126,15 +122,16 @@
                             </div>
                         </div>
                     </div>
-
+                    {% endif %}
                 {% endfor %}
 
             {% else %}
-                    <h6>No Comments yet!! Be the First.</h6>
+                <h6>No Comments yet!! Be the First.</h6>
             {% endif %}
 
+            <div class="container">
             {% if user.is_authenticated %}
-                Comment as {{ user.username }}:
+                <span>Comment as {{ user.username }}:</span>
                 <form method="POST" novalidate>
                     {% csrf_token %}
                     {% if from.errors %}
@@ -146,6 +143,7 @@
             {% else %}
                 <p>Please Log in to Comment.....</p>
             {% endif %}
+            </div>
 
         </div>
 

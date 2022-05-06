@@ -41,7 +41,7 @@ class PageList(ListView):
 class Details(FormMixin, DetailView):
     template_name = 'services/service.html'
     form_class = CommentsForm
-    model = Comments
+    model = Services
     context_object_name = 'service_data'
 
     def get_queryset(self):
@@ -49,6 +49,7 @@ class Details(FormMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(Details, self).get_context_data(**kwargs)
+        context['comments'] = Comments.objects.all()
         return context
 
     def get_success_url(self):
@@ -66,15 +67,15 @@ class Details(FormMixin, DetailView):
     def form_valid(self, form):
         myform = form.save(commit=False)
         myform.post = self.get_object()
-        print(myform.post)
+        print("Printing From - ", myform.post)
         myform.author = get_object_or_404(Costumer, user_id=self.request.user.id)
-        print(myform.author)
+        print("Author is - ", myform.author)
         myform.service_id = get_object_or_404(Services, pk=self.object.id)
-        print(myform.service_id)
+        print("Service ID is - ", myform.service_id)
         myform.content_type = ContentType.objects.get(app_label='Services', model='services')
-        print(myform.content_type)
+        print("Content type is - ", myform.content_type)
         myform.content_object = get_object_or_404(Services, pk=self.object.id)
-        print(myform.content_object)
+        print("Content object is - ", myform.content_object)
         myform.save()
         return super(Details, self).form_valid(form)
 
@@ -91,18 +92,15 @@ def replyPost(request):
     print(reply)
     auth = get_object_or_404(Costumer, user_id=request.POST['authuser'])
     print(auth)
-    serve_id = get_object_or_404(Services, id=request.POST['service_id'])
-    print(serve_id)
     timestamp = datetime.datetime.now()
     newreply, created = Comments.objects.get_or_create(
         content_type=content_obj,
         object_id=obj_id,
         message=reply,
         author=auth,
-        service_id=serve_id,
         comment_time=timestamp
     )
-    test = get_object_or_404(Services, id=request.POST['service_id'])
+    test = get_object_or_404(Services, id=request.POST['service'])
     slugify = test.slug
     print(slugify)
 

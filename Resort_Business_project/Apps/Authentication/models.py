@@ -1,7 +1,5 @@
-from django.contrib.contenttypes.fields import GenericRelation
-from django.db import models
 from django.contrib.auth.models import User
-
+from django.db import models
 
 
 class Costumer(models.Model):
