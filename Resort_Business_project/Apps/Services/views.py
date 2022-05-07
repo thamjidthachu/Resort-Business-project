@@ -1,15 +1,21 @@
 # Create your views here.
+from django.utils import timezone
+import datetime
+import email
+
+from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
-from django.http import HttpResponse, HttpResponseRedirect
+from django.core.mail import send_mail
+from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from django.views.generic import DetailView, ListView
-from django.views.generic.edit import FormMixin, CreateView
+from django.views.generic.edit import FormMixin
+
+from .forms import CommentsForm
 from .models import Services, Comments
 from ..Authentication.models import Costumer
-from .forms import CommentsForm
-from django.core.paginator import Paginator
-import datetime
+from Resort_Business_project import settings
 
 
 class EndlessScroll(ListView):
@@ -49,9 +55,6 @@ class Details(FormMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(Details, self).get_context_data(**kwargs)
-        # print(self.object, 'hiiiiiiiiii')
-        # print(self.object.comments, 'helllllllllllloooooo')
-        # context['comments'] = Comments.objects.all()
         return context
 
     def get_success_url(self):
@@ -89,10 +92,17 @@ def replyPost(request):
     obj_id = request.POST['reply_id']
     print(obj_id)
     reply = request.POST['reply']
-    print(reply)
+    print("reply is ", reply)
     auth = get_object_or_404(Costumer, user_id=request.POST['authuser'])
-    print(auth)
-    timestamp = datetime.datetime.now()
+    print("Replier is ", auth)
+    commenter = get_object_or_404(Comments, id=request.POST['reply_id'])
+    print("Comment Obj is ", commenter)
+    users = get_object_or_404(Costumer, id=commenter.author.id)
+    print(users)
+    check = get_object_or_404(User, id=users.user_id)
+    print(check.email)
+    email = check.email
+    timestamp = datetime.datetime.now(tz=timezone.utc)
     newreply, created = Comments.objects.get_or_create(
         content_type=content_obj,
         object_id=obj_id,
@@ -100,12 +110,17 @@ def replyPost(request):
         author=auth,
         comment_time=timestamp
     )
+
     test = get_object_or_404(Services, id=request.POST['service'])
     slugify = test.slug
-    print(slugify)
+    subject = 'Resort Business'
+    message = f'Hi {users}, {auth} replied on your Comment "{commenter}" as "{reply}"'
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = [email, ]
+    print("Slug _ ", slugify)
 
     if not created:
         newreply.save()
+    send_mail(subject, message, email_from, recipient_list)
+    print("mail sent")
     return redirect(reverse('service:datas', args=[slugify]))
-
-

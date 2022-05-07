@@ -12,11 +12,12 @@ class ImagesInline(admin.StackedInline):
     model = Images
     extra = 0
 
-    # class CommentsInline(admin.TabularInline):
-    #     model = Comments
-    #     can_delete = False
-    #     readonly_fields = ('author', 'message', 'comment_time')
-    #     verbose_name_plural = 'Comments'
+
+class CommentsInline(admin.TabularInline):
+    model = Comments
+    can_delete = False
+    readonly_fields = ('author', 'message', 'comment_time')
+    verbose_name_plural = 'Comments'
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -35,7 +36,7 @@ class ServiceAdmin(admin.ModelAdmin):
         (None, {'fields': ['name', 'discription']}),
         ('Date information', {'fields': ['create_time'], 'classes': ['collapse']}),
     ]
-    inlines = [ImagesInline]
+    inlines = [ImagesInline,]
     list_display = ('name', 'create_time',)
     readonly_fields = ('create_time',)
 
