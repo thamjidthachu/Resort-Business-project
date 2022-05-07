@@ -10,20 +10,16 @@
 </head>
 <body>
     <div class="container">
-        <center>
-
-        <div class="form-class">
-
           <h2>Log In</h2> <br>
+        <div class="form-class">
            <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            <input type="text" class="form" name="username" placeholder="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username"> <br>
+            <input type="password" class="form" name="password" placeholder="password" autocomplete="current-password" required="" id="id_password"> <br>
             <button class="btn btn-primary" type="submit">Log In</button>
           </form>
 
         </div>
-
-        </center>
     </div>
 </body>
 

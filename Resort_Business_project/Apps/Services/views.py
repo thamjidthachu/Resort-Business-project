@@ -88,19 +88,12 @@ class Details(FormMixin, DetailView):
 
 def replyPost(request):
     content_obj = ContentType.objects.get(app_label='Services', model='comments')
-    print(content_obj)
     obj_id = request.POST['reply_id']
-    print(obj_id)
     reply = request.POST['reply']
-    print("reply is ", reply)
     auth = get_object_or_404(Costumer, user_id=request.POST['authuser'])
-    print("Replier is ", auth)
     commenter = get_object_or_404(Comments, id=request.POST['reply_id'])
-    print("Comment Obj is ", commenter)
     users = get_object_or_404(Costumer, id=commenter.author.id)
-    print(users)
     check = get_object_or_404(User, id=users.user_id)
-    print(check.email)
     email = check.email
     timestamp = datetime.datetime.now(tz=timezone.utc)
     newreply, created = Comments.objects.get_or_create(
@@ -117,7 +110,6 @@ def replyPost(request):
     message = f'Hi {users}, {auth} replied on your Comment "{commenter}" as "{reply}"'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email, ]
-    print("Slug _ ", slugify)
 
     if not created:
         newreply.save()

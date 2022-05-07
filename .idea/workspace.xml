@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0391aed1-7950-4272-b1f0-24e5718e4cec" name="Changes" comment="Push to repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Resort_Business_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Resort_Business_project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/services/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/services/service.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
