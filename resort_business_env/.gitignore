@@ -111,18 +111,11 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-flycatch_website/.env
-flycatch_website/local.py
 .venv
-env/
+resort_business_env/
 venv/
 ENV/
-env.bak/
-venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
 
 # Rope project settings
 .ropeproject
@@ -130,19 +123,6 @@ venv.bak/
 # mkdocs documentation
 /site
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
 
 ### VirtualEnv template
 # Virtualenv
@@ -233,5 +213,9 @@ fabric.properties
 
 media
 
-!/static/assets/lib/
+
 !/static/assets/images/
+!/static/assets/css/
+!/static/assets/js/
+!/static/mine/css/
+!/static/mine/js/
