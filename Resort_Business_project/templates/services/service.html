@@ -3,10 +3,10 @@
 <head>
     <title>Detail View</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'mine/css/style.css' %}">
     <link rel="shortcut icon" href="/static/assets/images/logo.png" type="image/x-icon">
     <link rel="icon" href="/static/assets/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mine/css/style.css' %}">
 </head>
     <body class="data">
         <div class="container">
@@ -79,7 +79,7 @@
                             <img class="rounded mx-auto d-block w-100 p-2 border border-dark" src="/static/assets/images/user.png" alt="user">
                         </div>
                         <div class="col-md-11">
-                            <b> {{comment.author}} </b> <span class="badge bg-dark">{{comment.comment_time}}</span>
+                            <b> {{comment.author}} </b> <span class="badge bg-secondary">{{comment.comment_time}}</span>
                             <div> {{comment.message}}</div>
 
                             <div class="reply mx-0">
@@ -94,7 +94,7 @@
                                             <img class="rounded mx-auto d-block w-100 p-2 border border-danger" src="/static/assets/images/user.png" alt="user">
                                         </div>
                                         <div class="col-md-11">
-                                            <b> {{reply.author}} </b> <span class="badge bg-secondary">{{reply.comment_time}}</span>
+                                            <b> {{reply.author}} </b> <span class="badge badge-dark bg-white">{{reply.comment_time}}</span>
                                             <div> {{reply.message}}</div>
                                         </div>
                                     </div>
@@ -114,7 +114,6 @@
                                     {% else %}
                                         <p>Please Log in to Reply.....</p>
                                     {% endif %}
-
                                 </div>
                                 </div>
                             </div>
@@ -151,6 +150,5 @@
     <script src="/static/mine/js/script2.js"></script>
     <script src="/static/mine/js/script.js"></script>
     <script> $('.link').css('cursor', 'pointer'); </script>
-
     </body>
 </html>

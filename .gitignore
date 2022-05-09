@@ -109,6 +109,7 @@ Resort_Business_project/db.sqlite3
 Resort_Business_project/manage.py
 Resort_Business_project/media/
 Resort_Business_project/static/
+Resort_Business_project/assets/
 main.py
 
 # virtual environment
