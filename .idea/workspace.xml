@@ -2,128 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0391aed1-7950-4272-b1f0-24e5718e4cec" name="Changes" comment="Push to repository">
-      <change beforePath="$PROJECT_DIR$/.idea/Resort-Business.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/08-F1-after-party-at-sripanwa-phuket-luxury-resort-phuket-1920x1080.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/08-F1-after-party-at-sripanwa-phuket-luxury-resort-phuket-1920x1080_WvPuVD4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/1600129495569_682026860.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/1600484146179_603912588_edited.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/16250398-5b87-45cb-ab4b-504d4e7fc45c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/2bedroom-tiny-1024x684.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/81f0252a527211eba10f0242ac110003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/BRI2087.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/BRI2087_UF4PvKh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Bar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Bar2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Business-Centre.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Business-Centre_hote.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Couple-kayaking-1024x681.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/DL-Kids-Hero-v2-1440x780.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Emersons-Green-Kids-1440x780.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Emersons-Green-Kids-1440x780_XxzacvQ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Family_space.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/GettyImages-639328408.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/GettyImages_sight_seeing.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Heritage_Villa1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Heritage_Villa3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Kayak.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Porto-Montenegro-Yacht-Club-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Porto-Montenegro-Yacht-Club-5_gIiML9V.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Porto-Montenegro-Yacht-Club-5_noYYkmp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/RJ6-ydV-17U-kayak-destacada.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/The_Grill_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/The_Grill_1_auxOpLv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Yacht_Club_Marina.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Yacht_Club_Marina_1boO2gv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Yacht_Club_Marina_HL2tIE2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/Zen_Resturent.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/become_a_housekeeper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/bigkids-resorts-w-kids-clubs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/business-center-roseate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/camping.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/da.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/da_ustpi6C.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/daining.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/daining_A2oVuNS.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/f8mvpqaedp5azunmrtlw.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/familiyvaca3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/forest_sight_seeing.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/holiday-resort.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/home-bar-ideas-laurenliess-lo-hbx080121inspoindex-016-1640206482.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/houseboat-Spree-River-Germany.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/kerala-luxury-houseboat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/pool_facility.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/pool_facility_MvR4CoC.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/pool_facility_QzSVI27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/property-Heritage-villa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/resturent.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/road_trip_sight_seeing.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sight_Seeing.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sight_Seeing_Ompuptd.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sight_Seeing_hwg1S1C.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sight_Seeing_quxcgFL.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sightseeing.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sightseeing_70CArhq.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/site_seeing.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/site_seeing_ZmERdj9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sketch1568696234702.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/sustainable-cleaning-in-hotels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/swimming_pool_area.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/swimming_pool_area_kkLRb7S.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/tina-and-russel-wedding-in-bali-35.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/traditional_wedding.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/waterpark.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/waterpark2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/waterpark2_TLfesJr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/waterpark3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/waterpark3_rZxxS9R.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/wedding_pool.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/wedding_stage.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/yatch_facility.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/yatch_facility_Vy9jCbH.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/media/service_images/yatch_facility_vRorssk.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/1639134468071.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/1639134468081.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/1639134468094.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/background1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/nwdn_file_temp_1609647055930.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/part.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/th-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/thachu-logo1.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/wp2936933-coding-minimalist-wallpapers.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/wp4932288-coding-minimalist-wallpapers.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/wp4932289-coding-minimalist-wallpapers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/images/wp4932312-coding-minimalist-wallpapers.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.esm.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.esm.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.esm.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/infinite.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery-2.2.4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/js/jquery.waypoints.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/spinner-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/mine/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/mine/js/script2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resort_business_env/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +41,6 @@
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ayurvedha" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
