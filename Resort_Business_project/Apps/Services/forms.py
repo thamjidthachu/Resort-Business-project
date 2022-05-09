@@ -17,7 +17,7 @@ class CommentsForm(forms.ModelForm):
         }
         widgets = {
             'message': forms.TextInput(
-                attrs={'class': 'form', 'placeholder': 'Comment Your Comment', 'required': True})
+                attrs={'class': 'form', 'placeholder': 'Comment Your Review', 'required': True})
         }
         labels = {
             'message': '',

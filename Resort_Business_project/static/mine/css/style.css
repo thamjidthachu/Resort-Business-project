@@ -153,7 +153,6 @@ ul.errorlist>li {
     }
 
 .form {
-    display: block;
     width: 50%;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
@@ -161,6 +160,7 @@ ul.errorlist>li {
     line-height: 1.5;
     float: left;
     color: #212529;
+    box-sizing: unset;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;

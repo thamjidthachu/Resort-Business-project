@@ -214,8 +214,4 @@ fabric.properties
 media
 
 
-!/static/assets/images/
-!/static/assets/css/
-!/static/assets/js/
-!/static/mine/css/
-!/static/mine/js/
+!/static/

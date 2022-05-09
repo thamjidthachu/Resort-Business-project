@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0391aed1-7950-4272-b1f0-24e5718e4cec" name="Changes" comment="Push to repository" />
+    <list default="true" id="0391aed1-7950-4272-b1f0-24e5718e4cec" name="Changes" comment="Push to repository">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Services/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/authentication/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resort_business_env/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/resort_business_env/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +44,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
