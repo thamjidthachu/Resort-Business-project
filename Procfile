@@ -1,1 +1,1 @@
-web: python manage.py runserver
+web: python Resort_Business_project/manage.py runserver
