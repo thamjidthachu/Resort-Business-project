@@ -112,6 +112,6 @@ pip-selfcheck.json
 !main.py
 
 # virtual environment
-resort_business_env/
+!resort_business_env/
 
 !Resort_Business_project/Resort_Business_project/settings.py
