@@ -102,8 +102,8 @@ pip-selfcheck.json
 .idea
 .vscode/
 
-Resort_Business_project/Apps/Authentication/migrations/
-Resort_Business_project/Apps/Services/migrations/
+!Resort_Business_project/Apps/Authentication/migrations/
+!Resort_Business_project/Apps/Services/migrations/
 Resort_Business_project/db.sqlite3
 Resort_Business_project/manage.py
 Resort_Business_project/media/
