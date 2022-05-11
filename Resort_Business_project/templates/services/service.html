@@ -81,12 +81,6 @@
                         <div class="col-md-11">
                             <b> {{comment.author}} </b> <span class="badge bg-secondary">{{comment.comment_time}}</span>
                             <div> {{comment.message}}</div>
-
-                            <div class="reply mx-0">
-                                <p class="link" data-toggle="collapse" data-target="#replyBox{{comment.id}}" aria-expanded="false" aria-controls="replyBox {{comment.id}}">
-                                    Reply
-                                </p>
-                                <div class="collapse reply-sec" id="replyBox{{comment.id}}">
                                     {% for reply in comment.comment.all %}
                                     <hr>
                                     <div class="row my-3">
@@ -94,11 +88,17 @@
                                             <img class="rounded mx-auto d-block w-100 p-2 border border-danger" src="/static/assets/images/user.png" alt="user">
                                         </div>
                                         <div class="col-md-11">
-                                            <b> {{reply.author}} </b> <span class="badge badge-dark bg-white">{{reply.comment_time}}</span>
+                                            <b> {{reply.author}} </b> <span class="badge bg-dark">{{reply.comment_time}}</span>
                                             <div> {{reply.message}}</div>
                                         </div>
                                     </div>
                                     {% endfor %}
+
+                            <div class="reply mx-0">
+                                <p class="link" data-toggle="collapse" data-target="#replyBox{{comment.id}}" aria-expanded="false" aria-controls="replyBox {{comment.id}}">
+                                    Reply
+                                </p>
+                                <div class="collapse reply-sec" id="replyBox{{comment.id}}">
 
                                 <div class="my-2">
                                     {% if user.is_authenticated %}
