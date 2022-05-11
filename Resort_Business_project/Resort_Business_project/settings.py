@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'ckeditor'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://calm-caverns-74864.herokuapp.com/'
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
