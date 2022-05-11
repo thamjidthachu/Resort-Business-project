@@ -38,7 +38,7 @@ INSTALLED_APPS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://calm-caverns-74864.herokuapp.com/'
+    "https://calm-caverns-74864.herokuapp.com"
 ]
 
 MIDDLEWARE = [
