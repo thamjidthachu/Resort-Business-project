@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    {% load static %}
+    <link rel="shortcut icon" href="/static/assets/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="/static/assets/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'mine/css/style.css' %}">-->
+</head>
+<body>
+    <div class="container">
+        <div class="form-class">
+           <form method="post">
+          <h2 class="text-center">Log In</h2> <br>
+            {% csrf_token %}
+            <input type="text" class="form-control" name="username" placeholder="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username"> <br>
+            <input type="password" class="form-control" name="password" placeholder="password" autocomplete="current-password" required="" id="id_password"> <br>
+               <div class="d-grid gap-2">
+                   <button class="btn btn-primary" type="submit">Log In</button>
+                </div>
+          </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
