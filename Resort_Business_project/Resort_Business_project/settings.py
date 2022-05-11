@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m0^y2_2p)!iw8g!vcrn-_a6l&43r@helklbmrem5-z9l9)^j+%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['calm-caverns-74864.herokuapp.com', '127.0.0.1', 'localhost']
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
