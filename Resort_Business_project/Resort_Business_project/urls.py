@@ -18,11 +18,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import TemplateView
+from Apps.Authentication.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', include('Apps.Authentication.urls')),
     path('services/', include('Apps.Services.urls')),
     path('authentication/', include("django.contrib.auth.urls")),
-    path('', TemplateView.as_view(template_name='authentication/home.html'), name='home'),
+    # path('', TemplateView.as_view(template_name='authentication/home.html'), name='home'),
+    path('', HomeView.as_view(), name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
