@@ -833,6 +833,9 @@ table#change-history tbody th {
 }
 
 #container > .main {
+    background-image:url('/static/assets/images/part.jpeg');
+    background-repeat:no-repeat;
+    background-size:100%;
     display: flex;
     flex: 1 0 auto;
 }
@@ -856,6 +859,7 @@ table#change-history tbody th {
 }
 
 #content-related {
+    background-color: #ffffffb8;
     float: right;
     width: 260px;
     position: relative;
@@ -964,9 +968,9 @@ table#change-history tbody th {
 
 /* SIDEBAR */
 
-#content-related {
+/*#content-related {
     background: var(--darkened-bg);
-}
+}*/
 
 #content-related .module {
     background: none;
