@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0391aed1-7950-4272-b1f0-24e5718e4cec" name="Changes" comment="Push to repository">
+      <change afterPath="$PROJECT_DIR$/Resort_Business_project/static/admin/css/nav_sidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resort_Business_project/templates/admin/base_site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resort_Business_project/templates/admin/change_list_object_tools.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/admin/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/admin/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/Apps/Authentication/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/static/mine/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resort_Business_project/templates/admin/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resort_Business_project/templates/admin/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +48,16 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resort_Business_project/templates/registration" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resort_Business_project/templates/admin" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thach\Desktop\Flycatch\Resort-Business\Resort_Business_project\templates\admin" />
+      <recent name="C:\Users\thach\Desktop\Flycatch\Resort-Business\Resort_Business_project\static\admin\css" />
       <recent name="C:\Users\thach\Desktop\Flycatch\Resort-Business\Resort_Business_project\templates\registration" />
       <recent name="C:\Users\thach\Desktop\Flycatch\Resort-Business\Resort_Business_project\static\assets\images" />
       <recent name="C:\Users\thach\Desktop\Flycatch\Resort Business Application\Resort_Business_project\static\assets\images" />
-      <recent name="C:\Users\thach\Desktop\Flycatch\Resort Business Application\Resort_Business_project\templates\registration" />
-      <recent name="C:\Users\thach\Desktop\Flycatch\Resort Business Application\Resort_Business_project\templates\services" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\thach\Desktop\Flycatch\Resort-Business\Resort_Business_project\static\admin\css" />

@@ -17,8 +17,12 @@ class UserAdmin(BaseUserAdmin):
     inlines = (CustomerInline,)
 
 
+class CostumerAdmin(admin.ModelAdmin):
+    list_display = ('user', 'age', 'address', 'citizen')
+
+
 # Re-register UserAdmin
 admin.site.unregister(User)
 admin.site.unregister(Group)
 admin.site.register(User, UserAdmin)
-admin.site.register(Costumer)
+admin.site.register(Costumer, CostumerAdmin)
