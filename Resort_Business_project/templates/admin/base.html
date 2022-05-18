@@ -3,8 +3,8 @@
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}">
 <head>
 <title>{% block title %}{% endblock %}</title>
-<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'mine/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static 'admin/css/base.css' %}{% endblock %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
 {% if not is_popup and is_nav_sidebar_enabled %}
     <link rel="stylesheet" type="text/css" href="{% static "admin/css/nav_sidebar.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static 'mine/css/style.css' %}">
